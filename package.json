@@ -9,9 +9,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b --noEmit && vite build && electron-builder",
-    "build:dir": "tsc -b --noEmit && vite build && electron-builder --dir",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "generate-icon": "node scripts/generate-icon.mjs"
   },
   "dependencies": {
     "qrcode": "^1.5.4",
@@ -32,6 +32,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.5",
     "globals": "^17.11.0",
+    "png-to-ico": "^3.0.2",
     "tailwindcss": "^4",
     "typescript": "^5",
     "typescript-eslint": "^8.68.0",
@@ -52,13 +53,9 @@
     "win": {
       "icon": "public/icon.png",
       "target": [
-        "nsis",
+        "dir",
         "portable"
       ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
     }
   }
 }

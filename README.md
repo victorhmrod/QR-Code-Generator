@@ -41,7 +41,7 @@ library (ISO/IEC 18004-compliant) and rendered directly to PNG and SVG.
 
 ## Installing
 
-Grab the latest `QR Code Generator Setup <version>.exe` from the
+Grab the latest `QRCodeGenerator-Setup-<version>.exe` from the
 [Releases](../../releases) page and run it, or use the portable
 `QR Code Generator <version>.exe` build — no installation required.
 
@@ -54,6 +54,8 @@ it. Choose **More info** and then **Run anyway** to continue.
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) 20+
+- [Inno Setup 6](https://jrsoftware.org/isinfo.php) (`winget install --id
+  JRSoftware.InnoSetup -e`) for the installer
 
 ### Run in development
 
@@ -64,14 +66,25 @@ npm run dev
 
 This opens the app window with hot reload.
 
-### Build the installer
+### Build the app
 
 ```bash
 npm run build
 ```
 
-Produces `QR Code Generator Setup <version>.exe` (installer) and
-`QR Code Generator <version>.exe` (portable) in `dist-installer/`.
+Packages the Electron app and produces `QR Code Generator <version>.exe`
+(portable, no install) in `dist-installer/`.
+
+### Build the installer
+
+Requires Inno Setup 6. This builds the app and packages it in one step:
+
+```powershell
+./scripts/build_installer.ps1
+```
+
+The output lands at `dist-installer/QRCodeGenerator-Setup-<version>.exe`. See
+[installer/QRCodeGenerator.iss](installer/QRCodeGenerator.iss).
 
 ## Stack
 
