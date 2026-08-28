@@ -4,6 +4,7 @@
   "private": true,
   "description": "Desktop app for generating custom QR codes.",
   "author": "Victor H",
+  "license": "GPL-3.0",
   "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",

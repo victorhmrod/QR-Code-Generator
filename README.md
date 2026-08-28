@@ -13,7 +13,7 @@
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows-0078D6">
   <img alt="language" src="https://img.shields.io/badge/language-TypeScript-blue">
   <img alt="UI" src="https://img.shields.io/badge/UI-React%20%2B%20Electron-41CD52">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-blue">
+  <img alt="license" src="https://img.shields.io/badge/license-GPL--3.0-blue">
 </p>
 
 ---
@@ -82,4 +82,4 @@ Produces `QR Code Generator Setup <version>.exe` (installer) and
 
 ## License
 
-MIT — Copyright (C) 2026 Victor H
+[GPL-3.0](LICENSE) — Copyright (C) 2026 Victor H
